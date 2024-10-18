@@ -656,7 +656,7 @@ class BrnDefaultConfigUtils {
     middleNormalBgColor: Color(0xFFF8F8F8),
     deepSelectBgColor: Color(0xFFF8F8F8),
     deepNormalBgColor: Color(0xFFF0F0F0),
-    confirmBgColor: Colors.blue,
+    confirmBgColor: Colors.red,
     resetTextStyle: BrnTextStyle(
       color: defaultCommonConfig.colorTextImportant,
       fontSize: defaultCommonConfig.fontSizeCaption,
