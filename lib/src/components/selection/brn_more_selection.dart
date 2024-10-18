@@ -311,9 +311,10 @@ class MoreBottomSelectionWidget extends StatelessWidget {
         ),
         Expanded(
             child: BrnBigMainButton(
-          title: BrnIntl.of(context).localizedResource.ok,
+          title: '@${BrnIntl.of(context).localizedResource.ok}',
           bgColor: themeData.confirmBgColor,
           onTap: () {
+            print(themeData.confirmBgColor);
             if (conformCallback != null) {
               conformCallback!(entity);
             }
