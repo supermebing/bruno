@@ -3,8 +3,7 @@ import 'package:bruno/src/components/picker/base/brn_picker_constants.dart';
 import 'package:bruno/src/constants/brn_asset_constants.dart';
 import 'package:bruno/src/constants/brn_strings_constants.dart';
 import 'package:bruno/src/theme/base/brn_text_style.dart';
-import 'package:bruno/src/theme/brn_theme_configurator.dart'
-    show BRUNO_CONFIG_ID;
+import 'package:bruno/src/theme/brn_theme_configurator.dart' show BRUNO_CONFIG_ID;
 import 'package:bruno/src/theme/configs/brn_abnormal_state_config.dart';
 import 'package:bruno/src/theme/configs/brn_action_sheet_config.dart';
 import 'package:bruno/src/theme/configs/brn_all_config.dart';
@@ -350,8 +349,7 @@ class BrnDefaultConfigUtils {
   );
 
   /// 空页面配置
-  static BrnAbnormalStateConfig defaultAbnormalStateConfig =
-      BrnAbnormalStateConfig(
+  static BrnAbnormalStateConfig defaultAbnormalStateConfig = BrnAbnormalStateConfig(
     titleTextStyle: BrnTextStyle(
       color: defaultCommonConfig.colorTextBase,
       fontSize: defaultCommonConfig.fontSizeSubHead,
@@ -429,8 +427,7 @@ class BrnDefaultConfigUtils {
   );
 
   /// 内容信息（两列）配置
-  static BrnPairInfoTableConfig defaultPairInfoTableConfig =
-      BrnPairInfoTableConfig(
+  static BrnPairInfoTableConfig defaultPairInfoTableConfig = BrnPairInfoTableConfig(
     rowSpacing: 4,
     itemSpacing: 2,
     keyTextStyle: BrnTextStyle(
@@ -449,8 +446,7 @@ class BrnDefaultConfigUtils {
   );
 
   /// 内容信息（一列）配置
-  static BrnPairRichInfoGridConfig defaultPairRichInfoGridConfig =
-      BrnPairRichInfoGridConfig(
+  static BrnPairRichInfoGridConfig defaultPairRichInfoGridConfig = BrnPairRichInfoGridConfig(
     rowSpacing: 4.0,
     itemSpacing: 2.0,
     itemHeight: 20.0,
@@ -561,8 +557,7 @@ class BrnDefaultConfigUtils {
   );
 
   /// 数字增强信息配置
-  static BrnEnhanceNumberCardConfig defaultEnhanceNumberInfoConfig =
-      BrnEnhanceNumberCardConfig(
+  static BrnEnhanceNumberCardConfig defaultEnhanceNumberInfoConfig = BrnEnhanceNumberCardConfig(
     runningSpace: 16.0,
     itemRunningSpace: 8.0,
     titleTextStyle: BrnTextStyle(fontSize: 28.0, fontWeight: FontWeight.w500),
@@ -627,8 +622,7 @@ class BrnDefaultConfigUtils {
     ),
     tagRadius: defaultCommonConfig.radiusSm,
     tagNormalBackgroundColor: defaultCommonConfig.fillBody,
-    tagSelectedBackgroundColor:
-        defaultCommonConfig.brandPrimary.withOpacity(0.12),
+    tagSelectedBackgroundColor: defaultCommonConfig.brandPrimary.withOpacity(0.12),
     rangeTitleTextStyle: BrnTextStyle(
       color: defaultCommonConfig.colorTextBase,
       fontSize: defaultCommonConfig.fontSizeSubHead,
@@ -662,6 +656,7 @@ class BrnDefaultConfigUtils {
     middleNormalBgColor: Color(0xFFF8F8F8),
     deepSelectBgColor: Color(0xFFF8F8F8),
     deepNormalBgColor: Color(0xFFF0F0F0),
+    confirmBgColor: Colors.blue,
     resetTextStyle: BrnTextStyle(
       color: defaultCommonConfig.colorTextImportant,
       fontSize: defaultCommonConfig.fontSizeCaption,
@@ -696,8 +691,7 @@ class BrnDefaultConfigUtils {
   );
 
   /// 查看图片配置
-  static BrnGalleryDetailConfig defaultGalleryDetailConfig =
-      BrnGalleryDetailConfig(
+  static BrnGalleryDetailConfig defaultGalleryDetailConfig = BrnGalleryDetailConfig(
     appbarTitleStyle: BrnTextStyle(
       color: defaultCommonConfig.colorTextBaseInverse,
       fontSize: defaultCommonConfig.fontSizeSubHead,

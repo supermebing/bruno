@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:bruno/bruno.dart';
 import 'package:bruno/src/components/button/brn_big_main_button.dart';
 import 'package:bruno/src/components/line/brn_line.dart';
 import 'package:bruno/src/components/selection/bean/brn_selection_common_entity.dart';
@@ -32,20 +33,14 @@ class BrnMoreSelectionPage extends StatefulWidget {
   final BrnOnCustomFloatingLayerClick? onCustomFloatingLayerClick;
   final BrnSelectionConfig themeData;
 
-  BrnMoreSelectionPage(
-      {Key? key,
-      required this.entityData,
-      this.confirmCallback,
-      this.onCustomFloatingLayerClick,
-      required this.themeData})
+  BrnMoreSelectionPage({Key? key, required this.entityData, this.confirmCallback, this.onCustomFloatingLayerClick, required this.themeData})
       : super(key: key);
 
   @override
   _BrnMoreSelectionPageState createState() => _BrnMoreSelectionPageState();
 }
 
-class _BrnMoreSelectionPageState extends State<BrnMoreSelectionPage>
-    with SingleTickerProviderStateMixin {
+class _BrnMoreSelectionPageState extends State<BrnMoreSelectionPage> with SingleTickerProviderStateMixin {
   List<BrnSelectionEntity> _originalSelectedItemsList = [];
   late AnimationController _controller;
   late Animation<Offset> _animation;
@@ -59,8 +54,7 @@ class _BrnMoreSelectionPageState extends State<BrnMoreSelectionPage>
       duration: const Duration(milliseconds: 300),
       vsync: this,
     );
-    _animation =
-        Tween(end: Offset.zero, begin: Offset(1.0, 0.0)).animate(_controller);
+    _animation = Tween(end: Offset.zero, begin: Offset(1.0, 0.0)).animate(_controller);
     _controller.forward();
 
     _originalSelectedItemsList.addAll(widget.entityData.allSelectedList());
@@ -245,15 +239,12 @@ class _BrnMoreSelectionPageState extends State<BrnMoreSelectionPage>
           (node.filterType == BrnSelectionFilterType.range ||
               node.filterType == BrnSelectionFilterType.dateRange ||
               node.filterType == BrnSelectionFilterType.dateRangeCalendar)) {
-        if (node.customMap != null &&
-            !BrunoTools.isEmpty(node.customMap!['min']) &&
-            !BrunoTools.isEmpty(node.customMap!['max'])) {
+        if (node.customMap != null && !BrunoTools.isEmpty(node.customMap!['min']) && !BrunoTools.isEmpty(node.customMap!['max'])) {
           if (!node.isValidRange()) {
             isValid = false;
             if (node.filterType == BrnSelectionFilterType.range) {
               BrnToast.show(BrnIntl.of(context).localizedResource.enterRangeError, context);
-            } else if (node.filterType == BrnSelectionFilterType.dateRange ||
-                node.filterType == BrnSelectionFilterType.dateRangeCalendar) {
+            } else if (node.filterType == BrnSelectionFilterType.dateRange || node.filterType == BrnSelectionFilterType.dateRangeCalendar) {
               BrnToast.show(BrnIntl.of(context).localizedResource.enterRangeError, context);
             }
             return;
@@ -321,6 +312,7 @@ class MoreBottomSelectionWidget extends StatelessWidget {
         Expanded(
             child: BrnBigMainButton(
           title: BrnIntl.of(context).localizedResource.ok,
+          bgColor: themeData.confirmBgColor,
           onTap: () {
             if (conformCallback != null) {
               conformCallback!(entity);
